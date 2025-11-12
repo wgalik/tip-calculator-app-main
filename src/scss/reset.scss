@@ -1,0 +1,50 @@
+@use "./variables" as v;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+button,
+input,
+label {
+  background-color: transparent;
+  border: none;
+  font-family: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: inherit;
+  display: inline-block;
+  border-radius: 0.25rem;
+  padding: 0.5rem 0;
+  &:hover {
+    cursor: pointer;
+  }
+}
+input {
+  background-color: v.$Grey50;
+  color: v.$Green900;
+  appearance: none;
+  text-align: end;
+  width: 100%;
+  background-position: 1rem center;
+  background-size: 1rem;
+  background-repeat: no-repeat;
+
+  &:focus {
+    appearance: none;
+    outline: none;
+  }
+  &:focus-visible {
+    appearance: none;
+    outline: none;
+  }
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}

@@ -1,0 +1,22 @@
+{
+  "name": "tip-calculator-app-main",
+  "version": "1.0.0",
+  "description": "![Design preview for the Tip calculator app coding challenge](./preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "sass src/scss:dist/css",
+    "postcss": "postcss dist/css/*.css --dir dist/css",
+    "build": "npm run scss && npm run postcss",
+    "watch": "sass --watch src/scss:dist/css & postcss --watch dist/css/*.css --dir dist/css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.22",
+    "postcss": "^8.5.6",
+    "postcss-cli": "^11.0.1",
+    "sass": "^1.94.0"
+  }
+}

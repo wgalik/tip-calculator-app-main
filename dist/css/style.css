@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+button,
+input,
+label {
+  background-color: transparent;
+  border: none;
+  font-family: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: inherit;
+  display: inline-block;
+  border-radius: 0.25rem;
+  padding: 0.5rem 0;
+}
+button:hover,
+input:hover,
+label:hover {
+  cursor: pointer;
+}
+
+input {
+  background-color: hsl(189, 47%, 97%);
+  color: hsl(183, 100%, 15%);
+  appearance: none;
+  text-align: end;
+  width: 100%;
+  background-position: 1rem center;
+  background-size: 1rem;
+  background-repeat: no-repeat;
+}
+input:focus {
+  appearance: none;
+  outline: none;
+}
+input:focus-visible {
+  appearance: none;
+  outline: none;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+body {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-style: normal;
+  background-color: hsl(185, 41%, 84%);
+  width: 100vw;
+  min-height: 100dvh;
+  font-size: 1.5rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-rows: 1fr auto;
+  padding-top: 1rem;
+}
+@media (min-width: 48rem) {
+  body {
+    padding: 1vw;
+    grid-template-rows: auto auto;
+  }
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 48rem) {
+  header {
+    flex-direction: row;
+    align-self: center;
+  }
+}
+
+main {
+  width: 100%;
+  max-width: 920px;
+  height: auto;
+  background-color: hsl(0, 100%, 100%);
+  border-radius: 2rem 2rem 0 0;
+  padding: 2rem;
+  align-self: end;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+@media (min-width: 48rem) {
+  main {
+    flex-direction: row;
+    justify-self: center;
+    align-self: start;
+    border-radius: 2rem;
+  }
+}
+main #form {
+  flex: 1 1 60%;
+}
+@media (min-width: 48rem) {
+  main #form {
+    flex: 1 1 50%;
+    height: 100%;
+  }
+}
+main #form label {
+  color: hsl(186, 14%, 43%);
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+main #form label:nth-child(1) {
+  margin-top: 0;
+}
+main #form input#bill {
+  background-image: url("../../images/icon-dollar.svg");
+}
+main #form input#people {
+  background-image: url("../../images/icon-person.svg");
+}
+main #form .buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, fr);
+  gap: 1rem;
+  width: 100%;
+}
+@media (min-width: 40rem) {
+  main #form .buttons {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, fr);
+  }
+}
+main #form .buttons button {
+  background-color: hsl(183, 100%, 15%);
+  color: hsl(0, 100%, 100%);
+  transition: all 0.3s ease-in-out;
+}
+main #form .buttons button:hover {
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+}
+main #form .buttons input {
+  width: 100%;
+  text-align: center;
+}
+main #result {
+  flex: 1 1 40%;
+  background-color: hsl(183, 100%, 15%);
+  border-radius: 1rem;
+  padding: 2rem;
+  display: grid;
+  grid-template-rows: repeat(2, auto) 1fr;
+  gap: 1rem;
+}
+@media (min-width: 48rem) {
+  main #result {
+    flex: 1 1 50%;
+  }
+}
+main #result div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main #result div h3 {
+  color: hsl(172, 67%, 45%);
+  font-size: 2.5rem;
+}
+main #result div h6 {
+  color: hsl(0, 100%, 100%);
+}
+main #result div h6 span {
+  display: block;
+  color: hsl(186, 14%, 43%);
+  font-size: 0.8rem;
+}
+main #result button {
+  width: 100%;
+  color: hsl(183, 100%, 15%);
+  background-color: hsl(186, 14%, 43%);
+  align-self: end;
+  transition: all 0.3s ease-in-out;
+  margin-top: 1rem;
+}
+main #result button:not(:disabled):hover {
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+}
+main #result button:disabled:hover {
+  background-color: none;
+  color: hsl(183, 100%, 15%);
+  cursor: auto;
+}
+
+/*# sourceMappingURL=style.css.map */
