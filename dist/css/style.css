@@ -29,7 +29,9 @@ label:hover {
 input {
   background-color: hsl(189, 47%, 97%);
   color: hsl(183, 100%, 15%);
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   text-align: end;
   width: 100%;
   background-position: 1rem center;
@@ -37,11 +39,15 @@ input {
   background-repeat: no-repeat;
 }
 input:focus {
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   outline: none;
 }
 input:focus-visible {
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   outline: none;
 }
 
@@ -202,5 +208,4 @@ main #result button:disabled:hover {
   color: hsl(183, 100%, 15%);
   cursor: auto;
 }
-
 /*# sourceMappingURL=style.css.map */
