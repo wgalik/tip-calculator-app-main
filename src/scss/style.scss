@@ -143,6 +143,7 @@ main {
         box-shadow: inset 0 0 3px v.$Green900;
       }
       &:disabled {
+        box-shadow: none;
         background-color: v.$Grey500;
         color: v.$Green900;
         cursor: auto;
