@@ -47,8 +47,8 @@ const showResults = (tipAmount, totalResult) => {
     if (totalResultContainer)
         totalResultContainer.innerHTML = `$${totalResult.toFixed(2)}`;
 };
-billInput === null || billInput === void 0 ? void 0 : billInput.addEventListener("keyup", aggregateEventData);
-customInput === null || customInput === void 0 ? void 0 : customInput.addEventListener("keyup", (event) => {
+billInput === null || billInput === void 0 ? void 0 : billInput.addEventListener("input", aggregateEventData);
+customInput === null || customInput === void 0 ? void 0 : customInput.addEventListener("input", (event) => {
     var _a;
     const target = event.target;
     if (isActiveTip) {
@@ -60,7 +60,7 @@ customInput === null || customInput === void 0 ? void 0 : customInput.addEventLi
     }
     aggregateEventData();
 });
-peopleInput === null || peopleInput === void 0 ? void 0 : peopleInput.addEventListener("keyup", aggregateEventData);
+peopleInput === null || peopleInput === void 0 ? void 0 : peopleInput.addEventListener("input", aggregateEventData);
 tipButtons.forEach((button) => {
     button.addEventListener("click", (event) => {
         var _a;

@@ -53,9 +53,9 @@ const showResults = (tipAmount: number, totalResult: number) => {
     totalResultContainer.innerHTML = `$${totalResult.toFixed(2)}`;
 };
 
-billInput?.addEventListener("keyup", aggregateEventData);
+billInput?.addEventListener("input", aggregateEventData);
 
-customInput?.addEventListener("keyup", (event) => {
+customInput?.addEventListener("input", (event) => {
   const target = event.target as HTMLInputElement;
 
   if (isActiveTip) {
@@ -68,7 +68,7 @@ customInput?.addEventListener("keyup", (event) => {
   aggregateEventData();
 });
 
-peopleInput?.addEventListener("keyup", aggregateEventData);
+peopleInput?.addEventListener("input", aggregateEventData);
 
 tipButtons.forEach((button) => {
   button.addEventListener("click", (event) => {
